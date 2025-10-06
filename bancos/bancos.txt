@@ -1,0 +1,3 @@
+Estes códigos contém funções de conexão e extração de dados de dois bancos principais:
+- Sideufg: uma das fontes de dados do projeto
+- Supabase: O banco de dados do PFC
