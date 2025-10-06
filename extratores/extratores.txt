@@ -1,0 +1,1 @@
+contém todos os códigos necessários para extrair e tratar dados das apis e plataformas
