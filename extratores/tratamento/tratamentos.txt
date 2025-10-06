@@ -1,0 +1,1 @@
+funções de tratamento das extrações para que fiquem adequados às suas respectivas tabelas no banco supabase
