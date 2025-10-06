@@ -1,0 +1,1 @@
+resultados completos, como serão colocados numa tabela dedicada no banco supabase
