@@ -1,0 +1,1 @@
+extrações resumidas e padronizadas para que sejam inserdas juntas na tabela 'leitura' do supabase
