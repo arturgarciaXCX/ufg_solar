@@ -1,0 +1,1 @@
+aqui temos funções para obtenção de parametros para as chamadas de apis
