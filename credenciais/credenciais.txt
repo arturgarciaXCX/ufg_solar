@@ -1,0 +1,1 @@
+Nesta pasta tenho arquivos .xlsx contendo as credenciais nescessárias para se conectar à apis. Por motivos óbvios, não estão acessíveis neste repositório
