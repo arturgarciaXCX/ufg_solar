@@ -1,0 +1,1 @@
+Estes códigos contém funções relacionadas às chamadas de APIs, para as plataformas de onde extraio dados através de chamadas de API
