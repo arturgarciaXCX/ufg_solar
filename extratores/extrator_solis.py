@@ -10,11 +10,7 @@ from extratores.parametros import parametros_datas
 # Importa o novo módulo de tratamento específico da Solis
 from extratores.tratamento import tratamento_solis
 
-def executar_extracao_solis(caminho_saida_completo: str, caminho_saida_resumido: str):
-    """
-    Executa a lógica de extração da Solis, aplica os tratamentos
-    e salva os resultados em arquivos CSV separados.
-    """
+def executar_extracao_solis():
     parametros_completos = parametros_datas.gerar_parametros_de_data(plataformas_alvo=['Solis'])
     parametros_solis = parametros_completos.get('Solis', [])
     
@@ -38,19 +34,14 @@ def executar_extracao_solis(caminho_saida_completo: str, caminho_saida_resumido:
             # Chama a função de tratamento que retorna os dois DataFrames
             df_completo, df_resumido = tratamento_solis.tratar_dados_solis(df_bruto)
 
-            # Salva o resultado COMPLETO
             if not df_completo.empty:
-                print("\n--- AMOSTRA DO RESULTADO COMPLETO (SOLIS) ---")
-                print(df_completo.head())
-                df_completo.to_csv(caminho_saida_completo, index=False)
-                print(f" -> Resultado completo salvo em: {caminho_saida_completo}")
-            
-            # Salva o resultado RESUMIDO
+                print("\n--- RESULTADO COMPLETO PRONTO (SOLIS) ---")
+
             if not df_resumido.empty:
-                print("\n--- AMOSTRA DO RESULTADO RESUMIDO (SOLIS) ---")
-                print(df_resumido.head())
-                df_resumido.to_csv(caminho_saida_resumido, index=False)
-                print(f" -> Resultado resumido salvo em: {caminho_saida_resumido}")
+                print("\n--- RESULTADO RESUMIDO PRONTO (SOLARMAN) ---")
+
+            return df_completo, df_resumido
+
         else:
             print("\nExtração concluída, mas nenhum dado foi retornado para os inversores da Solis.")
     else:
@@ -58,7 +49,4 @@ def executar_extracao_solis(caminho_saida_completo: str, caminho_saida_resumido:
 
 if __name__ == "__main__":
     # O bloco de teste agora passa os dois caminhos de saída
-    executar_extracao_solis(
-        caminho_saida_completo="extracao_solis_completo.csv",
-        caminho_saida_resumido="extracao_solis_resumido.csv"
-    )
+    executar_extracao_solis()

@@ -10,7 +10,7 @@ from extratores.parametros import parametros_datas
 # Importa o novo módulo de tratamento específico da Solarman
 from extratores.tratamento import tratamento_solarman
 
-def executar_extracao_solarman(caminho_saida_completo: str, caminho_saida_resumido: str):
+def executar_extracao_solarman():
     """
     Executa a lógica de extração da Solarman, aplica os tratamentos
     e salva os resultados em arquivos CSV separados.
@@ -38,26 +38,19 @@ def executar_extracao_solarman(caminho_saida_completo: str, caminho_saida_resumi
             # --- INTEGRAÇÃO DO TRATAMENTO ---
             df_completo, df_resumido = tratamento_solarman.tratar_dados_solarman(df_bruto)
 
-            # Salva o resultado COMPLETO
             if not df_completo.empty:
-                print("\n--- AMOSTRA DO RESULTADO COMPLETO (SOLARMAN) ---")
+                print("\n--- RESULTADO COMPLETO PRONTO (SOLARMAN) ---")
                 print(df_completo.head())
-                df_completo.to_csv(caminho_saida_completo, index=False)
-                print(f" -> Resultado completo salvo em: {caminho_saida_completo}")
             
-            # Salva o resultado RESUMIDO
             if not df_resumido.empty:
-                print("\n--- AMOSTRA DO RESULTADO RESUMIDO (SOLARMAN) ---")
-                print(df_resumido.head())
-                df_resumido.to_csv(caminho_saida_resumido, index=False)
-                print(f" -> Resultado resumido salvo em: {caminho_saida_resumido}")
+                print("\n--- RESULTADO RESUMIDO PRONTO (SOLARMAN) ---")
+
+            return df_completo, df_resumido
+        
         else:
             print("\nNenhum dado foi coletado para os inversores da Solarman.")
     else:
         print("\nExtração Solarman não executada: Nenhum parâmetro para 'Solarman' foi encontrado.")
 
 if __name__ == "__main__":
-    executar_extracao_solarman(
-        caminho_saida_completo="extracao_solarman_completo.csv",
-        caminho_saida_resumido="extracao_solarman_resumido.csv"
-    )
+    executar_extracao_solarman()

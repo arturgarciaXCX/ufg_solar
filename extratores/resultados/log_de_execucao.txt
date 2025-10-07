@@ -1,0 +1,86 @@
+
+================================================================================
+INÍCIO DA EXECUÇÃO DO PIPELINE EM: 2025-10-06 01:44:10
+================================================================================
+[2025-10-06 01:44:10] - --- Iniciando pipeline para SideUFG ---
+[2025-10-06 01:54:23] - Resultado do carregamento SideUFG (resumido): Erro inesperado durante o carregamento para 'medicao': {'message': 'insert or update on table "medicao" violates foreign key constraint "medicao_medidor_id_fkey"', 'code': '23503', 'hint': None, 'details': 'Key (medidor_id)=(nan) is not present in table "medidor".'}
+[2025-10-06 01:54:23] - --- Iniciando pipeline para Solis ---
+[2025-10-06 01:54:39] - Resultado do carregamento Solis (completo): Sucesso: 4 de 4 registros processados em 1 lote(s) na tabela 'leituras_completas_solis'.
+[2025-10-06 01:54:39] - Resultado do carregamento Solis (resumido): Sucesso: 4 de 4 registros processados em 1 lote(s) na tabela 'leitura'.
+[2025-10-06 01:54:39] - --- Iniciando pipeline para WEG ---
+[2025-10-06 01:57:06] - Resultado do carregamento WEG (completo): Sucesso: 147 de 147 registros processados em 1 lote(s) na tabela 'leituras_completas_weg'.
+[2025-10-06 01:57:06] - Resultado do carregamento WEG (resumido): Sucesso: 147 de 147 registros processados em 1 lote(s) na tabela 'leitura'.
+[2025-10-06 01:57:06] - --- Iniciando pipeline para Solarman ---
+[2025-10-06 01:57:14] - !!! ERRO CRÍTICO no pipeline de Solarman: "['total ac output power (active)'] not in index" !!!
+[2025-10-06 01:57:14] - --- PROCESSO COMPLETO FINALIZADO. Tempo total: 784.83 segundos. ---
+
+
+
+
+
+
+
+================================================================================
+INÍCIO DA EXECUÇÃO DO PIPELINE EM: 2025-10-06 11:29:26
+================================================================================
+[2025-10-06 11:29:26] - --- Iniciando pipeline para SideUFG ---
+[2025-10-06 11:29:49] - Nenhum dado retornado pela extração SideUFG.
+[2025-10-06 11:29:49] - --- Iniciando pipeline para Solis ---
+
+ -> Nenhum dado encontrado para 2025-10-01. Adicionando linha vazia.
+Buscando dados para o dia: 2025-10-02...
+ -> Ocorreu um erro: HTTPSConnectionPool(host='www.soliscloud.com', port=13333): Max retries exceeded with url: /v1/api/inverterDay (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002098A932330>, 'Connection to www.soliscloud.com timed out. (connect timeout=20)'))
+ -> Nenhum dado encontrado para 2025-10-02. Adicionando linha vazia.
+Buscando dados para o dia: 2025-10-03...
+  -> Ocorreu um erro: HTTPSConnectionPool(host='www.soliscloud.com', port=13333): Max retries exceeded with url: /v1/api/inverterDay (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002098A931B50>, 'Connection to www.soliscloud.com timed out. (connect timeout=20)'))
+ -> Nenhum dado encontrado para 2025-10-03. Adicionando linha vazia.
+Buscando dados para o dia: 2025-10-04...
+  -> Ocorreu um erro: HTTPSConnectionPool(host='www.soliscloud.com', port=13333): Max retries exceeded with url: /v1/api/inverterDay (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000002098A9309E0>, 'Connection to www.soliscloud.com timed out. (connect timeout=20)'))
+ -> Nenhum dado encontrado para 2025-10-04. Adicionando linha vazia.
+================================================================================
+INÍCIO DA EXECUÇÃO DO PIPELINE EM: 2025-10-06 13:40:45
+================================================================================
+[2025-10-06 13:40:45] - --- Iniciando pipeline para SideUFG ---
+[2025-10-06 13:49:04] - Resultado do carregamento SideUFG (resumido): Sucesso: 724285 de 724285 registros processados em 483 lote(s) na tabela 'medicao'.
+[2025-10-06 13:49:04] - --- Iniciando pipeline para Solis ---
+[2025-10-06 13:49:57] - Resultado do carregamento Solis (completo): Sucesso: 3286 de 3286 registros processados em 3 lote(s) na tabela 'leituras_completas_solis'.
+[2025-10-06 13:49:58] - Resultado do carregamento Solis (resumido): Sucesso: 3286 de 3286 registros processados em 3 lote(s) na tabela 'leitura'.
+[2025-10-06 13:49:58] - --- Iniciando pipeline para WEG ---
+[2025-10-06 13:52:23] - Resultado do carregamento WEG (completo): Sucesso: 287 de 287 registros processados em 1 lote(s) na tabela 'leituras_completas_weg'.
+[2025-10-06 13:52:23] - Resultado do carregamento WEG (resumido): Sucesso: 287 de 287 registros processados em 1 lote(s) na tabela 'leitura'.
+[2025-10-06 13:52:23] - --- Iniciando pipeline para Solarman ---
+[2025-10-06 13:52:38] - Resultado do carregamento Solarman (completo): Sucesso: 361 de 361 registros processados em 1 lote(s) na tabela 'leituras_completas_solarman'.
+[2025-10-06 13:52:39] - Resultado do carregamento Solarman (resumido): Sucesso: 361 de 361 registros processados em 1 lote(s) na tabela 'leitura'.
+[2025-10-06 13:52:39] - --- PROCESSO COMPLETO FINALIZADO. Tempo total: 713.18 segundos. ---
+
+================================================================================
+INÍCIO DA EXECUÇÃO DO PIPELINE EM: 2025-10-06 14:21:26
+================================================================================
+[2025-10-06 14:21:26] - --- Iniciando pipeline para SideUFG ---
+[2025-10-06 14:21:29] - Resultado do carregamento SideUFG (resumido): Sucesso: 92 de 92 registros processados em 1 lote(s) na tabela 'medicao'.
+[2025-10-06 14:21:29] - --- Iniciando pipeline para Solis ---
+[2025-10-06 14:21:38] - Resultado do carregamento Solis (completo): Sucesso: 4 de 4 registros processados em 1 lote(s) na tabela 'leituras_completas_solis'.
+[2025-10-06 14:21:38] - Resultado do carregamento Solis (resumido): Sucesso: 4 de 4 registros processados em 1 lote(s) na tabela 'leitura'.
+[2025-10-06 14:21:39] - --- Iniciando pipeline para WEG ---
+[2025-10-06 14:22:54] - Resultado do carregamento WEG (completo): Sucesso: 66 de 66 registros processados em 1 lote(s) na tabela 'leituras_completas_weg'.
+[2025-10-06 14:22:54] - Resultado do carregamento WEG (resumido): Sucesso: 66 de 66 registros processados em 1 lote(s) na tabela 'leitura'.
+[2025-10-06 14:22:54] - --- Iniciando pipeline para Solarman ---
+[2025-10-06 14:23:00] - Resultado do carregamento Solarman (completo): Sucesso: 63 de 63 registros processados em 1 lote(s) na tabela 'leituras_completas_solarman'.
+[2025-10-06 14:23:00] - Resultado do carregamento Solarman (resumido): Sucesso: 63 de 63 registros processados em 1 lote(s) na tabela 'leitura'.
+[2025-10-06 14:23:00] - --- PROCESSO COMPLETO FINALIZADO. Tempo total: 93.80 segundos. ---
+
+================================================================================
+INÍCIO DA EXECUÇÃO DO PIPELINE EM: 2025-10-06 14:29:16
+================================================================================
+[2025-10-06 14:29:16] - --- Iniciando pipeline para SideUFG ---
+[2025-10-06 14:29:18] - Resultado do carregamento SideUFG (resumido): Sucesso: 16 de 16 registros processados em 1 lote(s) na tabela 'medicao'.
+[2025-10-06 14:29:18] - --- Iniciando pipeline para Solis ---
+[2025-10-06 16:42:43] - Resultado do carregamento Solis (completo): Erro inesperado durante o carregamento para 'leituras_completas_solis': {'message': 'ON CONFLICT DO UPDATE command cannot affect row a second time', 'code': '21000', 'hint': 'Ensure that no rows proposed for insertion within the same command have duplicate constrained values.', 'details': None}
+[2025-10-06 16:43:23] - Resultado do carregamento Solis (resumido): Erro inesperado durante o carregamento para 'leitura': {'message': 'ON CONFLICT DO UPDATE command cannot affect row a second time', 'code': '21000', 'hint': 'Ensure that no rows proposed for insertion within the same command have duplicate constrained values.', 'details': None}
+[2025-10-06 16:43:23] - --- Iniciando pipeline para WEG ---
+[2025-10-06 17:07:29] - Resultado do carregamento WEG (completo): Sucesso: 15764 de 15764 registros processados em 11 lote(s) na tabela 'leituras_completas_weg'.
+[2025-10-06 17:07:35] - Resultado do carregamento WEG (resumido): Sucesso: 15764 de 15764 registros processados em 11 lote(s) na tabela 'leitura'.
+[2025-10-06 17:07:35] - --- Iniciando pipeline para Solarman ---
+[2025-10-06 17:27:06] - Resultado do carregamento Solarman (completo): Sucesso: 14765 de 14765 registros processados em 10 lote(s) na tabela 'leituras_completas_solarman'.
+[2025-10-06 17:27:13] - Resultado do carregamento Solarman (resumido): Sucesso: 14765 de 14765 registros processados em 10 lote(s) na tabela 'leitura'.
+[2025-10-06 17:27:13] - --- PROCESSO COMPLETO FINALIZADO. Tempo total: 10677.06 segundos. ---

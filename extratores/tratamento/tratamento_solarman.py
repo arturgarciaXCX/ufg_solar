@@ -22,7 +22,7 @@ def tratar_dados_solarman(df: pd.DataFrame):
     # Tratamento para tabela resumida (leitura)
     df_resumido = df_completo[['id_leitura', 'fonte', 'collecttime', 'total ac output power (active)', 'sn']].copy()
     df_resumido.rename(columns={
-        'collectTime': 'data_hora',
+        'collecttime': 'data_hora',
         'sn': 'inversor_sn',
         'total ac output power (active)': 'energia_kw_h'
     }, inplace=True)

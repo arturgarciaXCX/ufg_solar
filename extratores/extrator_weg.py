@@ -10,7 +10,7 @@ from extratores.tratamento import tratamento_weg
 
 
 
-def executar_extracao_weg(caminho_saida_completo: str, caminho_saida_resumido: str):
+def executar_extracao_weg():
     parametros_completos = parametros_datas.gerar_parametros_de_data(plataformas_alvo=['WEG'])
     parametros_weg = parametros_completos.get('WEG', [])
 
@@ -37,23 +37,17 @@ def executar_extracao_weg(caminho_saida_completo: str, caminho_saida_resumido: s
             df_completo, df_resumido = tratamento_weg.tratar_dados_weg(df_bruto, parametros_weg)
 
             if not df_completo.empty:
-                print("\n--- AMOSTRA DO RESULTADO COMPLETO (WEG) ---")
-                print(df_completo.head())
-                df_completo.to_csv(caminho_saida_completo, index=False)
-                print(f" -> Resultado completo salvo em: {caminho_saida_completo}")
+                print("\n--- RESULTADO COMPLETO PRONTO (WEG) ---")
 
             if not df_resumido.empty:
-                print("\n--- AMOSTRA DO RESULTADO RESUMIDO (WEG) ---")
-                print(df_resumido.head())
-                df_resumido.to_csv(caminho_saida_resumido, index=False)
-                print(f" -> Resultado resumido salvo em: {caminho_saida_resumido}")
+                print("\n--- RESULTADO RESUMIDO PRONTO (SOLARMAN) ---")
+
+            return df_completo, df_resumido
+        
         else:
             print("\nExtração concluída, mas nenhum dado foi retornado para os inversores da WEG.")
     else:
         print("\nExtração WEG não executada: Nenhum parâmetro para 'WEG' foi encontrado.")
 
 if __name__ == "__main__":
-    executar_extracao_weg(
-        caminho_saida_completo="extracao_weg_completo.csv",
-        caminho_saida_resumido="extracao_weg_resumido.csv"
-    )
+    executar_extracao_weg()
