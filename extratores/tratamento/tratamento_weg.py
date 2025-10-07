@@ -25,6 +25,7 @@ def tratar_dados_weg(df: pd.DataFrame, parametros_weg: list):
     df_completo['time'] = np.where(condicao, valor_se_verdadeiro, valor_se_falso)
 
     df_completo['id_leitura'] = df_completo['time'].astype(str) + '_' + df_completo['device_id'].astype(str)
+    df_completo.drop_duplicates(subset='id_leitura',inplace=True)
 
     # --- Tratamento para tabela resumida (leitura) ---
     df_resumido = df_completo[['id_leitura', 'fonte', 'time', 'value', 'inversor_sn']]

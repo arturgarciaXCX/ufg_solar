@@ -20,10 +20,10 @@ def main():
     
     # Mapeamento de funções extratoras para suas tabelas de destino no Supabase
     pipelines = {
-        "SideUFG": {
-            "funcao": executar_extracao_sideufg,
-            "tabelas": {'resumido': 'medicao'} 
-        },
+        # "SideUFG": {
+        #     "funcao": executar_extracao_sideufg,
+        #     "tabelas": {'resumido': 'medicao'} 
+        # },
         "Solis": {
             "funcao": executar_extracao_solis,
             "tabelas": {'completo': 'leituras_completas_solis', 'resumido': 'leitura'}

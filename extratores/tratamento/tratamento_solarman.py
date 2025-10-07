@@ -17,6 +17,7 @@ def tratar_dados_solarman(df: pd.DataFrame):
     df_completo['collecttime'] = np.where(condicao, valor_se_verdadeiro, valor_se_falso)
 
     df_completo['id_leitura'] = df_completo['collecttime'].astype(str) + '_' + df_completo['sn'].astype(str)
+    df_completo.drop_duplicates(subset='id_leitura',inplace=True)
 
 
     # Tratamento para tabela resumida (leitura)

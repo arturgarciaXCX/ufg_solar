@@ -17,6 +17,7 @@ def tratar_dados_solis(df: pd.DataFrame):
                                 .dt.strftime('%Y-%m-%d %H:%M:%S').astype(str)
     
     df_completo['id_leitura'] = df_completo['datatimestamp'].astype(str) + '_' + df_completo['inverter_identifier'].astype(str)
+    df_completo.drop_duplicates(subset='id_leitura',inplace=True)
 
 
     

@@ -84,3 +84,38 @@ INÍCIO DA EXECUÇÃO DO PIPELINE EM: 2025-10-06 14:29:16
 [2025-10-06 17:27:06] - Resultado do carregamento Solarman (completo): Sucesso: 14765 de 14765 registros processados em 10 lote(s) na tabela 'leituras_completas_solarman'.
 [2025-10-06 17:27:13] - Resultado do carregamento Solarman (resumido): Sucesso: 14765 de 14765 registros processados em 10 lote(s) na tabela 'leitura'.
 [2025-10-06 17:27:13] - --- PROCESSO COMPLETO FINALIZADO. Tempo total: 10677.06 segundos. ---
+
+================================================================================
+INÍCIO DA EXECUÇÃO DO PIPELINE EM: 2025-10-07 17:59:23
+================================================================================
+[2025-10-07 17:59:23] - --- Iniciando pipeline para Solis ---
+[2025-10-07 17:59:23] - Nenhum dado retornado pela extração Solis.
+[2025-10-07 17:59:23] - --- Iniciando pipeline para WEG ---
+[2025-10-07 17:59:23] - Nenhum dado retornado pela extração WEG.
+[2025-10-07 17:59:23] - --- Iniciando pipeline para Solarman ---
+[2025-10-07 17:59:23] - Nenhum dado retornado pela extração Solarman.
+[2025-10-07 17:59:23] - --- PROCESSO COMPLETO FINALIZADO. Tempo total: 0.00 segundos. ---
+
+================================================================================
+INÍCIO DA EXECUÇÃO DO PIPELINE EM: 2025-10-07 18:00:01
+================================================================================
+[2025-10-07 18:00:01] - --- Iniciando pipeline para Solis ---
+
+================================================================================
+INÍCIO DA EXECUÇÃO DO PIPELINE EM: 2025-10-07 18:06:07
+================================================================================
+[2025-10-07 18:06:07] - --- Iniciando pipeline para Solis ---
+
+================================================================================
+INÍCIO DA EXECUÇÃO DO PIPELINE EM: 2025-10-07 18:08:30
+================================================================================
+[2025-10-07 18:08:30] - --- Iniciando pipeline para Solis ---
+[2025-10-07 19:14:26] - Resultado do carregamento Solis (completo): Erro inesperado durante o carregamento para 'leituras_completas_solis': {'message': 'ON CONFLICT DO UPDATE command cannot affect row a second time', 'code': '21000', 'hint': 'Ensure that no rows proposed for insertion within the same command have duplicate constrained values.', 'details': None}
+[2025-10-07 19:14:26] - Resultado do carregamento Solis (resumido): Erro inesperado durante o carregamento para 'leitura': {'message': 'ON CONFLICT DO UPDATE command cannot affect row a second time', 'code': '21000', 'hint': 'Ensure that no rows proposed for insertion within the same command have duplicate constrained values.', 'details': None}
+[2025-10-07 19:14:26] - --- Iniciando pipeline para WEG ---
+[2025-10-07 19:16:42] - Resultado do carregamento WEG (completo): Sucesso: 157 de 157 registros processados em 1 lote(s) na tabela 'leituras_completas_weg'.
+[2025-10-07 19:16:42] - Resultado do carregamento WEG (resumido): Sucesso: 157 de 157 registros processados em 1 lote(s) na tabela 'leitura'.
+[2025-10-07 19:16:42] - --- Iniciando pipeline para Solarman ---
+[2025-10-07 19:16:52] - Resultado do carregamento Solarman (completo): Sucesso: 316 de 316 registros processados em 1 lote(s) na tabela 'leituras_completas_solarman'.
+[2025-10-07 19:16:52] - Resultado do carregamento Solarman (resumido): Sucesso: 316 de 316 registros processados em 1 lote(s) na tabela 'leitura'.
+[2025-10-07 19:16:52] - --- PROCESSO COMPLETO FINALIZADO. Tempo total: 4101.94 segundos. ---
